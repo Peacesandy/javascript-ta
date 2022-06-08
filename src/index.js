@@ -1,6 +1,38 @@
 // complete the function
 function prime (num) {
-  // code goes here
+  
+
+
+ num = parseInt(prompt("Enter a number greater than one: "));
+let primenumber = true;
+
+
+if (num === 1) {
+    console.log("1 is not a prime number.");
+}
+
+
+else if (num > 1) {
+
+    
+    for (let i = 2; i < num; i++) {
+        if (num % i == 0) {
+            primenumber = false;
+            break;
+        }
+    }
+
+    if (primenumber) {
+        console.log(`${num} is a prime number`);
+    } else {
+        console.log(`${num} is a not prime number`);
+    }
+}
+
+
+else {
+    console.log("The number is not a prime number.");
+}
 }
 
 function solution (arg) {
